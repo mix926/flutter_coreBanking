@@ -1,45 +1,4 @@
-// import 'package:dio/dio.dart';
-// import 'package:flutter/material.dart';
 
-// import '../../../core/api_client.dart';
-// import '../dashboard/dashboard_screen.dart';
-
-// class LoginScreen extends StatefulWidget {
-//   const LoginScreen({super.key});
-//   @override
-//   State<LoginScreen> createState() => _LoginScreenState();
-// }
-
-// class _LoginScreenState extends State<LoginScreen> {
-//   final TextEditingController _usernsmeController = TextEditingController();
-//   final TextEditingController _passwordController = TextEditingController();
-
-//   bool _isLoading = false;
-//   String _errorMassage;
-
-//   Future<void> _handleLogin() async {
-//     setState(() {
-//       _isLoading = true;
-//       _errorMassage = null;
-//     });
-//     try {
-//       final response = await ApiClient.dio.post(
-//         '/api/v1/auth/login',
-//         data: {
-//           'username': _usernameController.text.trim(),
-//           'password': _passwordController.text.trim(),
-//         },
-//       );
-//       final token = response.data['token'] as String;
-//       await ApiClient.saveToken(token);
-//       if (mounted){
-//         Navigator.pushReplacement(
-//           MaterialPageRoute(builder: (context) => DashboardScreen()),
-//         );
-//       }
-//     }
-//   }
-// }
 // ខ្មែរ: នាំចូល Material និង ApiClient សម្រាប់ហៅ API
 import 'package:flutter/material.dart';
 import '../../../core/api_client.dart';
